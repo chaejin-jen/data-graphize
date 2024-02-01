@@ -1,0 +1,304 @@
+/**
+  * Color tokens
+*/
+:root {
+  --white: #fff;
+  --black: #000;
+  --light-gray: #d3d3d3;
+  --gray: #808080;
+  --dark-gray: #555;
+
+  /** Light theme */
+
+  /* Primary colors */
+  --sys-light-primary: #6750a4;
+  --sys-light-on-primary: #fff;
+  --sys-light-primary-container: #eaddff;
+  --sys-light-on-primary-container: #21005d;
+
+  /* Add-on primary colors */
+  --sys-light-primary-fixed: #eaddff;
+  --sys-light-on-primary-fixed: #21005d;
+  --sys-light-primary-fixed-dim: #d0bcff;
+  --sys-light-on-primary-fixed-variant: #4f378b;
+
+  /* Secondary colors */
+  --sys-light-secondary: #625b71;
+  --sys-light-on-secondary: #fff;
+  --sys-light-secondary-container: #e8def8;
+  --sys-light-on-secondary-container: #1d192b;
+
+  /* Add-on secondary colors */
+  --sys-light-secondary-fixed: #e8def8;
+  --sys-light-on-secondary-fixed: #1d192b;
+  --sys-light-secondary-fixed-dim: #ccc2dc;
+  --sys-light-on-secondary-fixed-variant: #4a4458;
+
+  /* Tertiary colors */
+  --sys-light-tertiary: #7d5260;
+  --sys-light-on-tertiary: #fff;
+  --sys-light-tertiary-container: #ffd8e4;
+  --sys-light-on-tertiary-container: #31111d;
+
+  /* Add-on tertiary colors */
+  --sys-light-tertiary-fixed: #ffd8e4;
+  --sys-light-on-tertiary-fixed: #31111d;
+  --sys-light-tertiary-fixed-dim: #efb8c8;
+  --sys-light-on-tertiary-fixed-variant: #633b48;
+
+  /* Error colors */
+  --sys-light-error: #b3261e;
+  --sys-light-on-error: #fff;
+  --sys-light-error-container: #f9dedc;
+  --sys-light-on-error-container: #410e0b;
+
+  /* Outline colors */
+  --sys-light-outline: #79747e;
+  --sys-light-outline-variant: #cac4d0;
+
+  /* Surface colors */
+  --sys-light-surface: #fef7ff;
+  --sys-light-on-surface: #1d1b20;
+  --sys-light-surface-variant: #e7e0ec;
+  --sys-light-on-surface-variant: #49454f;
+  --sys-light-inverse-surface: #322f35;
+  --sys-light-inverse-on-surface: #f5eff7;
+  --sys-light-inverse-primary: #d0bcff;
+  --sys-light-surface-tint: #6750a4;
+  --sys-light-surface-container-highest: #e6e0e9;
+  --sys-light-surface-container-high: #ece6f0;
+  --sys-light-surface-container: #f3edf7;
+  --sys-light-surface-container-low: #f7f2fa;
+  --sys-light-surface-container-lowest: #fff;
+
+  /* Add-on tertiary colors */
+  --sys-light-background: #fef7ff;
+  --sys-light-on-background: #1d1b20;
+  --sys-light-surface-bright: #fef7ff;
+  --sys-light-surface-dim: #ded8e1;
+  --sys-light-scrim: #000;
+  --sys-light-shadow: #000;
+
+  /* Dark theme */
+
+  /* Primary colors */
+  --sys-dark-primary: #d0bcff;
+  --sys-dark-on-primary: #381e72;
+  --sys-dark-primary-container: #4f378b;
+  --sys-dark-on-primary-container: #eaddff;
+
+  /* Add-on primary colors */
+  --sys-dark-primary-fixed: #eaddff;
+  --sys-dark-on-primary-fixed: #21005d;
+  --sys-dark-primary-fixed-dim: #d0bcff;
+  --sys-dark-on-primary-fixed-variant: #4f378b;
+
+  /* Secondary colors */
+  --sys-dark-secondary: #ccc2dc;
+  --sys-dark-on-secondary: #332d41;
+  --sys-dark-secondary-container: #4a4458;
+  --sys-dark-on-secondary-container: #e8def8;
+
+  /* Add-on secondary colors */
+  --sys-dark-secondary-fixed: #e8def8;
+  --sys-dark-on-secondary-fixed: #1d192b;
+  --sys-dark-secondary-fixed-dim: #ccc2dc;
+  --sys-dark-on-secondary-fixed-variant: #4a4458;
+
+  /* Tertiary colors */
+  --sys-dark-tertiary: #efb8c8;
+  --sys-dark-on-tertiary: #492532;
+  --sys-dark-tertiary-container: #633b48;
+  --sys-dark-on-tertiary-container: #ffd8e4;
+
+  /* Add-on tertiary colors */
+  --sys-dark-tertiary-fixed: #ffd8e4;
+  --sys-dark-on-tertiary-fixed: #31111d;
+  --sys-dark-tertiary-fixed-dim: #efb8c8;
+  --sys-dark-on-tertiary-fixed-variant: #633b48;
+
+  /* Error colors */
+  --sys-dark-error: #f2b8b5;
+  --sys-dark-on-error: #601410;
+  --sys-dark-error-container: #8c1d18;
+  --sys-dark-on-error-container: #f9dedc;
+
+  /* Outline colors */
+  --sys-dark-outline: #938f99;
+  --sys-dark-outline-variant: #49454f;
+
+  /* Background colors */
+  --sys-dark-background: #141218;
+  --sys-dark-on-background: #e6e0e9;
+  --sys-dark-surface-bright: #3b383e;
+  --sys-dark-surface-dim: #141218;
+  --sys-dark-scrim: #000;
+  --sys-dark-shadow: #000;
+
+  /* Surface colors */
+  --sys-dark-surface: #141218;
+  --sys-dark-on-surface: #e6e0e9;
+  --sys-dark-surface-variant: #49454f;
+  --sys-dark-on-surface-variant: #cac4d0;
+  --sys-dark-inverse-surface: #e6e0e9;
+  --sys-dark-inverse-on-surface: #322f35;
+  --sys-dark-inverse-primary: #6750a4;
+  --sys-dark-surface-tint: #d0bcff;
+  --sys-dark-surface-container-highest: #36343b;
+  --sys-dark-surface-container-high: #2b2930;
+  --sys-dark-surface-container: #211f26;
+  --sys-dark-surface-container-low: #1d1b20;
+  --sys-dark-surface-container-lowest: #0f0d13;
+}
+
+[data-theme='light'] {
+  --white: #fff;
+  --black: #000;
+  --light-gray: #d3d3d3;
+  --gray: #808080;
+  --dark-gray: #555;
+
+  /* Primary colors */
+  --primary: var(--sys-light-primary);
+  --on-primary: var(--sys-light-on-primary);
+  --primary-container: var(--sys-light-primary-container);
+  --on-primary-container: var(--sys-light-on-primary-container);
+
+  /* Add-on primary colors */
+  --primary-fixed: var(--sys-light-primary-fixed);
+  --on-primary-fixed: var(--sys-light-on-primary-fixed);
+  --primary-fixed-dim: var(--sys-light-primary-fixed-dim);
+  --on-primary-fixed-variant: var(--sys-light-on-primary-fixed-variant);
+
+  /* Secondary colors */
+  --secondary: var(--sys-light-secondary);
+  --on-secondary: var(--sys-light-on-secondary);
+  --secondary-container: var(--sys-light-secondary-container);
+  --on-secondary-container: var(--sys-light-on-secondary-container);
+
+  /* Add-on secondary colors */
+  --secondary-fixed: var(--sys-light-secondary-fixed);
+  --on-secondary-fixed: var(--sys-light-on-secondary-fixed);
+  --secondary-fixed-dim: var(--sys-light-secondary-fixed-dim);
+  --on-secondary-fixed-variant: var(--sys-light-on-secondary-fixed-variant);
+
+  /* Tertiary colors */
+  --tertiary: var(--sys-light-tertiary);
+  --on-tertiary: var(--sys-light-on-tertiary);
+  --tertiary-container: var(--sys-light-tertiary-container);
+  --on-tertiary-container: var(--sys-light-on-tertiary-container);
+
+  /* Add-on tertiary colors */
+  --tertiary-fixed: var(--sys-light-tertiary-fixed);
+  --on-tertiary-fixed: var(--sys-light-on-tertiary-fixed);
+  --tertiary-fixed-dim: var(--sys-light-tertiary-fixed-dim);
+  --on-tertiary-fixed-variant: var(--sys-light-on-tertiary-fixed-variant);
+
+  /* Error colors */
+  --error: var(--sys-light-error);
+  --on-error: var(--sys-light-on-error);
+  --errorcontainer: var(--sys-light-error-container);
+  --on-errorcontainer: var(--sys-light-on-error-container);
+
+  /* Outline colors */
+  --outline: var(--sys-light-outline);
+  --outline-variant: var(--sys-light-outline-variant);
+
+  /* Background colors */
+  --background: var(--sys-light-background);
+  --on-background: var(--sys-light-on-background);
+  --surface-bright: var(--sys-light-surface-bright);
+  --surface-dim: var(--sys-light-surface-dim);
+  --scrim: var(--sys-light-scrim);
+  --shadow: var(--sys-light-shadow);
+
+  /* Surface colors */
+  --surface: var(--sys-light-surface);
+  --on-surface: var(--sys-light-on-surface);
+  --surface-variant: var(--sys-light-surface-variant);
+  --on-surface-variant: var(--sys-light-on-surface-variant);
+  --inverse-surface: var(--sys-light-inverse-surface);
+  --inverse-on-surface: var(--sys-light-inverse-on-surface);
+  --inverse-primary: var(--sys-light-inverse-primary);
+  --surface-tint: var(--sys-light-surface-tint);
+  --surface-container-highest: var(--sys-light-surface-container-highest);
+  --surface-container-high: var(--sys-light-surface-container-high);
+  --surface-container: var(--sys-light-surface-container);
+  --surface-container-low: var(--sys-light-surface-container-low);
+  --surface-container-lowest: var(--sys-light-surface-container-lowest);
+}
+
+[data-theme='dark'] {
+  --white: #fff;
+  --black: #000;
+  --gray: #c9c9c9;
+
+  /* Primary colors */
+  --primary: var(--sys-dark-primary);
+  --on-primary: var(--sys-dark-on-primary);
+  --primary-container: var(--sys-dark-primary-container);
+  --on-primary-container: var(--sys-dark-on-primary-container);
+
+  /* Add-on primary colors */
+  --primary-fixed: var(--sys-dark-primary-fixed);
+  --on-primary-fixed: var(--sys-dark-on-primary-fixed);
+  --primary-fixed-dim: var(--sys-dark-primary-fixed-dim);
+  --on-primary-fixed-variant: var(--sys-dark-on-primary-fixed-variant);
+
+  /* Secondary colors */
+  --secondary: var(--sys-dark-secondary);
+  --on-secondary: var(--sys-dark-on-secondary);
+  --secondary-container: var(--sys-dark-secondary-container);
+  --on-secondary-container: var(--sys-dark-on-secondary-container);
+
+  /* Add-on secondary colors */
+  --secondary-fixed: var(--sys-dark-secondary-fixed);
+  --on-secondary-fixed: var(--sys-dark-on-secondary-fixed);
+  --secondary-fixed-dim: var(--sys-dark-secondary-fixed-dim);
+  --on-secondary-fixed-variant: var(--sys-dark-on-secondary-fixed-variant);
+
+  /* Tertiary colors */
+  --tertiary: var(--sys-dark-tertiary);
+  --on-tertiary: var(--sys-dark-on-tertiary);
+  --tertiary-container: var(--sys-dark-tertiary-container);
+  --on-tertiary-container: var(--sys-dark-on-tertiary-container);
+
+  /* Add-on tertiary colors */
+  --tertiary-fixed: var(--sys-dark-tertiary-fixed);
+  --on-tertiary-fixed: var(--sys-dark-on-tertiary-fixed);
+  --tertiary-fixed-dim: var(--sys-dark-tertiary-fixed-dim);
+  --on-tertiary-fixed-variant: var(--sys-dark-on-tertiary-fixed-variant);
+
+  /* Error colors */
+  --error: var(--sys-dark-error);
+  --on-error: var(--sys-dark-on-error);
+  --errorcontainer: var(--sys-dark-error-container);
+  --on-errorcontainer: var(--sys-dark-on-error-container);
+
+  /* Outline colors */
+  --outline: var(--sys-dark-outline);
+  --outline-variant: var(--sys-dark-outline-variant);
+
+  /* Background colors */
+  --background: var(--sys-dark-background);
+  --on-background: var(--sys-dark-on-background);
+  --surface-bright: var(--sys-dark-surface-bright);
+  --surface-dim: var(--sys-dark-surface-dim);
+  --scrim: var(--sys-dark-scrim);
+  --shadow: var(--sys-dark-shadow);
+
+  /* Surface colors */
+  --surface: var(--sys-dark-surface);
+  --on-surface: var(--sys-dark-on-surface);
+  --surface-variant: var(--sys-dark-surface-variant);
+  --on-surface-variant: var(--sys-dark-on-surface-variant);
+  --inverse-surface: var(--sys-dark-inverse-surface);
+  --inverse-on-surface: var(--sys-dark-inverse-on-surface);
+  --inverse-primary: var(--sys-dark-inverse-primary);
+  --surface-tint: var(--sys-dark-surface-tint);
+  --surface-container-highest: var(--sys-dark-surface-container-highest);
+  --surface-container-high: var(--sys-dark-surface-container-high);
+  --surface-container: var(--sys-dark-surface-container);
+  --surface-container-low: var(--sys-dark-surface-container-low);
+  --surface-container-lowest: var(--sys-dark-surface-container-lowest);
+}
