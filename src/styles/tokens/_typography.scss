@@ -62,19 +62,19 @@ $letter-spacings: (
   @include common-styles;
 
   font-size: get-map-value($font-sizes, $size);
-  font-weight: get-map-value($font-weights, regular);
+  font-weight: get-map-value(fonts.$font-weights, regular);
 }
 
 @mixin font-medium($size) {
   @include common-styles;
 
   font-size: get-map-value($font-sizes, $size);
-  font-weight: get-map-value($font-weights, medium);
+  font-weight: get-map-value(fonts.$font-weights, medium);
 }
 
 @mixin font-bold($size) {
   @include common-styles;
 
   font-size: get-map-value($font-sizes, $size);
-  font-weight: get-map-value($font-weights, bold);
+  font-weight: get-map-value(fonts.$font-weights, bold);
 }
