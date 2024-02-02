@@ -1,0 +1,106 @@
+@use '@/styles/tokens/_typography.scss' as typograpy;
+
+.display {
+  @include typograpy.headline-styles;
+
+  &-large {
+    @include typograpy.font-regular(xxl);
+  }
+
+  &-medium {
+    @include typograpy.font-regular(xl);
+  }
+
+  &-small {
+    @include typograpy.font-regular(large);
+  }
+}
+
+.header {
+  @include typograpy.headline-styles;
+
+  &-large,
+  h1 {
+    @include typograpy.font-regular(sm-large);
+  }
+
+  &-medium,
+  h2 {
+    @include typograpy.font-regular(lg-md);
+  }
+
+  &-small,
+  h3 {
+    @include typograpy.font-regular(medium);
+  }
+}
+
+.title {
+  @include typograpy.title-styles;
+
+  &-large {
+    @include typograpy.font-regular(sm-md);
+  }
+
+  &-medium {
+    @include typograpy.font-regular(base);
+  }
+
+  &-small {
+    @include typograpy.font-medium(small);
+  }
+}
+
+.body {
+  @include typograpy.body-styles;
+
+  &-large {
+    @include typograpy.font-regular(base);
+  }
+
+  &-medium {
+    @include typograpy.font-regular(small);
+  }
+
+  &-small {
+    @include typograpy.font-medium(xs);
+  }
+}
+
+.label {
+  @include typograpy.label-styles;
+
+  &-large {
+    @include typograpy.font-medium(small);
+  }
+
+  &-medium {
+    @include typograpy.font-medium(xs);
+  }
+
+  &-small {
+    @include typograpy.font-medium(xxs);
+  }
+}
+
+.label-prominent {
+  @include typograpy.label-styles;
+
+  &-large {
+    @include typograpy.font-bold(small);
+  }
+
+  &-medium {
+    @include typograpy.font-bold(xs);
+  }
+}
+
+.blockquote {
+  @include typograpy.body-styles;
+  @include typograpy.font-regular(small);
+
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 0.1rem solid #8fac06;
+  border-left: 1rem solid #8fac06;
+}
