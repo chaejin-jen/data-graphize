@@ -1,0 +1,119 @@
+@use '@/styles/tokens/_typography.scss' as typography;
+@import '@/styles/tokens/_colors.css';
+
+$rem-base: 16px;
+$scales: (
+  small: 0.8,
+  medium: 1,
+  large: 1.25,
+);
+$button-default-size: (
+  width: 7,
+  height: 3,
+  padding: 0.4,
+);
+$circle-default-size: (
+  width: 2.4,
+  height: 2.4,
+);
+
+@function get-scale-by-size($size) {
+  @return map-get($scales, $size);
+}
+
+@mixin get-size($default-size, $size) {
+  @each $key, $default in $default-size {
+    #{$key}: #{($default * get-scale-by-size($size))}rem;
+  }
+}
+
+$circle-translate-x-size: 3.6;
+
+@function get-circle-transition-size($size) {
+  @return #{($circle-translate-x-size * map-get($scales, $size))}rem;
+}
+
+$button-transition: 'all 0.5s ease-in-out';
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  @include typography.font-bold(small);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  transition: #{$button-transition};
+  border: 0.05rem solid var(--outline);
+  border-radius: 2rem;
+  background-color: var(--surface);
+  cursor: pointer;
+  filter: brightness(100%);
+
+  :hover {
+    filter: brightness(90%);
+  }
+
+  &-small {
+    @include get-size($button-default-size, small);
+  }
+
+  &-medium {
+    @include get-size($button-default-size, medium);
+  }
+
+  &-large {
+    @include get-size($button-default-size, large);
+  }
+}
+
+.circle {
+  position: absolute;
+  transition: #{$button-transition};
+  border-radius: 4rem;
+  background-color: var(--primary-container);
+  filter: brightness(80%);
+
+  :hover {
+    filter: brightness(100%);
+  }
+
+  &-small {
+    @include get-size($circle-default-size, small);
+  }
+
+  &-medium {
+    @include get-size($circle-default-size, medium);
+  }
+
+  &-large {
+    @include get-size($circle-default-size, large);
+  }
+}
+
+.circle-toggled {
+  transition: #{$button-transition};
+  background-color: var(--primary-fixed-dim);
+  filter: brightness(100%);
+
+  &-small {
+    transform: translate((get-circle-transition-size(small)), 0);
+  }
+
+  &-medium {
+    transform: translate((get-circle-transition-size(medium)), 0);
+  }
+
+  &-large {
+    transform: translate((get-circle-transition-size(large)), 0);
+  }
+}
+
+.right {
+  margin-left: auto;
+}
