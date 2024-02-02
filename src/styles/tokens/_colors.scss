@@ -1,0 +1,167 @@
+/** Color tokens */
+
+@mixin base-colors {
+  $white: #fff;
+  $black: #000;
+  $light-gray: #d3d3d3;
+  $gray: #808080;
+  $dark-gray: #555;
+}
+
+@mixin additional-colors {
+  $red: #f00;
+  $blue: #00f;
+  $green: #008000;
+  $yellow: #ff0;
+  $purple: #800080;
+  $cyan: #0ff;
+  $orange: #ffa500;
+  $pink: #ff69b4;
+  $teal: #008080;
+  $brown: #a52a2a;
+  $navy: #000080;
+  $violet: #ee82ee;
+  $gold: #ffd700;
+}
+
+/** Light theme */
+
+/* Primary colors */
+$sys-light-primary: #6750a4;
+$sys-light-on-primary: #fff;
+$sys-light-primary-container: #eaddff;
+$sys-light-on-primary-container: #21005d;
+
+/* Add-on primary colors */
+$sys-light-primary-fixed: #eaddff;
+$sys-light-on-primary-fixed: #21005d;
+$sys-light-primary-fixed-dim: #d0bcff;
+$sys-light-on-primary-fixed-variant: #4f378b;
+
+/* Secondary colors */
+$sys-light-secondary: #625b71;
+$sys-light-on-secondary: #fff;
+$sys-light-secondary-container: #e8def8;
+$sys-light-on-secondary-container: #1d192b;
+
+/* Add-on secondary colors */
+$sys-light-secondary-fixed: #e8def8;
+$sys-light-on-secondary-fixed: #1d192b;
+$sys-light-secondary-fixed-dim: #ccc2dc;
+$sys-light-on-secondary-fixed-variant: #4a4458;
+
+/* Tertiary colors */
+$sys-light-tertiary: #7d5260;
+$sys-light-on-tertiary: #fff;
+$sys-light-tertiary-container: #ffd8e4;
+$sys-light-on-tertiary-container: #31111d;
+
+/* Add-on tertiary colors */
+$sys-light-tertiary-fixed: #ffd8e4;
+$sys-light-on-tertiary-fixed: #31111d;
+$sys-light-tertiary-fixed-dim: #efb8c8;
+$sys-light-on-tertiary-fixed-variant: #633b48;
+
+/* Error colors */
+$sys-light-error: #b3261e;
+$sys-light-on-error: #fff;
+$sys-light-error-container: #f9dedc;
+$sys-light-on-error-container: #410e0b;
+
+/* Outline colors */
+$sys-light-outline: #79747e;
+$sys-light-outline-variant: #cac4d0;
+
+/* Background colors */
+$sys-light-background: #fef7ff;
+$sys-light-on-background: #1d1b20;
+$sys-light-surface-bright: #fef7ff;
+$sys-light-surface-dim: #ded8e1;
+$sys-light-scrim: #000;
+$sys-light-shadow: #000;
+
+/* Surface colors */
+$sys-light-surface: #fef7ff;
+$sys-light-on-surface: #1d1b20;
+$sys-light-surface-variant: #e7e0ec;
+$sys-light-on-surface-variant: #49454f;
+$sys-light-inverse-surface: #322f35;
+$sys-light-inverse-on-surface: #f5eff7;
+$sys-light-inverse-primary: #d0bcff;
+$sys-light-surface-tint: #6750a4;
+$sys-light-surface-container-highest: #e6e0e9;
+$sys-light-surface-container-high: #ece6f0;
+$sys-light-surface-container: #f3edf7;
+$sys-light-surface-container-low: #f7f2fa;
+$sys-light-surface-container-lowest: #fff;
+
+/** Dark theme */
+
+/* Primary colors */
+$sys-dark-primary: #d0bcff;
+$sys-dark-on-primary: #381e72;
+$sys-dark-primary-container: #4f378b;
+$sys-dark-on-primary-container: #eaddff;
+
+/* Add-on primary colors */
+$sys-dark-primary-fixed: #eaddff;
+$sys-dark-on-primary-fixed: #21005d;
+$sys-dark-primary-fixed-dim: #d0bcff;
+$sys-dark-on-primary-fixed-variant: #4f378b;
+
+/* Secondary colors */
+$sys-dark-secondary: #ccc2dc;
+$sys-dark-on-secondary: #332d41;
+$sys-dark-secondary-container: #4a4458;
+$sys-dark-on-secondary-container: #e8def8;
+
+/* Add-on secondary colors */
+$sys-dark-secondary-fixed: #e8def8;
+$sys-dark-on-secondary-fixed: #1d192b;
+$sys-dark-secondary-fixed-dim: #ccc2dc;
+$sys-dark-on-secondary-fixed-variant: #4a4458;
+
+/* Tertiary colors */
+$sys-dark-tertiary: #efb8c8;
+$sys-dark-on-tertiary: #492532;
+$sys-dark-tertiary-container: #633b48;
+$sys-dark-on-tertiary-container: #ffd8e4;
+
+/* Add-on tertiary colors */
+$sys-dark-tertiary-fixed: #ffd8e4;
+$sys-dark-on-tertiary-fixed: #31111d;
+$sys-dark-tertiary-fixed-dim: #efb8c8;
+$sys-dark-on-tertiary-fixed-variant: #633b48;
+
+/* Error colors */
+$sys-dark-error: #f2b8b5;
+$sys-dark-on-error: #601410;
+$sys-dark-error-container: #8c1d18;
+$sys-dark-on-error-container: #f9dedc;
+
+/* Outline colors */
+$sys-dark-outline: #938f99;
+$sys-dark-outline-variant: #49454f;
+
+/* Background colors */
+$sys-dark-background: #141218;
+$sys-dark-on-background: #e6e0e9;
+$sys-dark-surface-bright: #3b383e;
+$sys-dark-surface-dim: #141218;
+$sys-dark-scrim: #000;
+$sys-dark-shadow: #000;
+
+/* Surface colors */
+$sys-dark-surface: #141218;
+$sys-dark-on-surface: #e6e0e9;
+$sys-dark-surface-variant: #49454f;
+$sys-dark-on-surface-variant: #cac4d0;
+$sys-dark-inverse-surface: #e6e0e9;
+$sys-dark-inverse-on-surface: #322f35;
+$sys-dark-inverse-primary: #6750a4;
+$sys-dark-surface-tint: #d0bcff;
+$sys-dark-surface-container-highest: #36343b;
+$sys-dark-surface-container-high: #2b2930;
+$sys-dark-surface-container: #211f26;
+$sys-dark-surface-container-low: #1d1b20;
+$sys-dark-surface-container-lowest: #0f0d13;

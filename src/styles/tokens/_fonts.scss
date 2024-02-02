@@ -1,0 +1,37 @@
+/** Font tokens */
+
+$font-roboto: 'Roboto';
+$font-paths: (
+  light: 'Roboto-Light',
+  regular: 'Roboto-Regular',
+  medium: 'Roboto-Medium',
+  semibold: 'Roboto-SemiBold',
+);
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+);
+
+@mixin font-face($path, $weight) {
+  @font-face {
+    font-family: $font-roboto;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: $weight;
+    src:
+      local(#{$path}),
+      url(/public/fonts/#{$path}.woff2) format('woff2'),
+      url(/public/fonts/#{$path}.woff) format('woff'),
+      url(/public/fonts/#{$path}.ttf) format('truetype');
+  }
+}
+
+@include font-face('Roboto-Light', map-get($font-weights, light));
+@include font-face('Roboto-Regular', map-get($font-weights, regular));
+@include font-face('Roboto-Medium', map-get($font-weights, medium));
+@include font-face('Roboto-Bold', map-get($font-weights, Bold));

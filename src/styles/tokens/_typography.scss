@@ -1,0 +1,80 @@
+/** Typography tokens */
+
+@use '_fonts.scss' as fonts;
+
+$font-sizes: (
+  xxs: 0.875rem,
+  xs: 1rem,
+  small: 1.25rem,
+  base: 1.5rem,
+  sm-md: 1.75rem,
+  medium: 2rem,
+  lg-md: 2.25rem,
+  sm-large: 2.75rem,
+  large: 3rem,
+  xl: 3.5rem,
+  xxl: 3.8125rem,
+);
+$line-heights: (
+  small: 1.33,
+  medium: 1.43,
+  large: 1.5,
+);
+$letter-spacings: (
+  small: 0.05rem,
+  medium: 0.01rem,
+  large: -0.025rem,
+);
+
+// scope for map-get
+@function get-map-value($selected, $size) {
+  @return map-get($selected, $size);
+}
+
+@mixin common-styles {
+  font-family: fonts.$font-roboto;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: get-map-value(fonts.$font-weights, light);
+}
+
+@mixin headline-styles {
+  letter-spacing: normal;
+  line-height: get-map-value($line-heights, large);
+}
+
+@mixin title-styles {
+  letter-spacing: get-map-value($letter-spacings, small);
+  line-height: get-map-value($line-heights, medium);
+}
+
+@mixin body-styles {
+  letter-spacing: get-map-value($letter-spacings, medium);
+  line-height: get-map-value($line-heights, medium);
+}
+
+@mixin label-styles {
+  letter-spacing: get-map-value($letter-spacings, medium);
+  line-height: get-map-value($line-heights, small);
+}
+
+@mixin font-regular($size) {
+  @include common-styles;
+
+  font-size: get-map-value($font-sizes, $size);
+  font-weight: get-map-value($font-weights, regular);
+}
+
+@mixin font-medium($size) {
+  @include common-styles;
+
+  font-size: get-map-value($font-sizes, $size);
+  font-weight: get-map-value($font-weights, medium);
+}
+
+@mixin font-bold($size) {
+  @include common-styles;
+
+  font-size: get-map-value($font-sizes, $size);
+  font-weight: get-map-value($font-weights, bold);
+}
