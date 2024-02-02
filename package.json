@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -37,6 +38,10 @@
     "prettier": "^3.2.4",
     "sass": "^1.70.0",
     "storybook": "^7.6.8",
+    "stylelint": "^16.2.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "typescript": "^5"
   }
 }
