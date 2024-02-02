@@ -1,0 +1,106 @@
+/** Spacing tokens */
+
+$screen-small-min: 480px;
+$screen-medium-min: 768px;
+$screen-large-min: 992px;
+$screen-xlarge-min: 1200px;
+$form-element-height: 42px;
+
+// property
+$mx-rules: 'margin-left', 'margin-right';
+$my-rules: 'margin-top', 'margin-bottom';
+$ml-rules: 'margin-left';
+$mr-rules: 'margin-right';
+$mb-rules: 'margin-bottom';
+$mt-rules: 'margin-top';
+$px-rules: 'padding-left', 'padding-right';
+$py-rules: 'padding-top', 'padding-bottom';
+$pl-rules: 'padding-left';
+$pr-rules: 'padding-right';
+$pb-rules: 'padding-bottom';
+$pt-rules: 'padding-top';
+
+// rem
+$spacing-scale: (
+  3xs: 0.125,
+  2xs: 0.25,
+  xs: 0.5,
+  sm: 0.75,
+  md: 1,
+  lg: 1.5,
+  xl: 2,
+  2xl: 2.5,
+  3xl: 3,
+  4xl: 4,
+  5xl: 5,
+  6xl: 6,
+  7xl: 10,
+) !default;
+
+// scope for map-get
+@function get-spacing-value($size) {
+  @return map-get($spacing-scale, $size);
+}
+
+@mixin add-space-rule($rules, $size) {
+  $value: get-spacing-value($size);
+  @each $rule in $rules {
+    #{$rule}: #{$value}rem !important;
+  }
+}
+
+@mixin m($size) {
+  margin: #{$space}#{$unit} !important;
+}
+
+@mixin p($size) {
+  padding: #{$space}#{$unit} !important;
+}
+
+@mixin mx($size) {
+  @include add-space-rule((margin-left, margin-right), $size);
+}
+
+@mixin my($size) {
+  @include add-space-rule((margin-top, margin-bottom), $size);
+}
+
+@mixin ml($size) {
+  @include add-space-rule((margin-left), $size);
+}
+
+@mixin mr($size) {
+  @include add-space-rule((margin-right), $size);
+}
+
+@mixin mt($size) {
+  @include add-space-rule((margin-top), $size);
+}
+
+@mixin mb($size) {
+  @include add-space-rule((margin-bottom), $size);
+}
+
+@mixin px($size) {
+  @include add-space-rule((padding-left, padding-right), $size);
+}
+
+@mixin py($size) {
+  @include add-space-rule((padding-top, padding-bottom), $size);
+}
+
+@mixin pl($size) {
+  @include add-space-rule((padding-left), $size);
+}
+
+@mixin pr($size) {
+  @include add-space-rule((padding-right), $size);
+}
+
+@mixin pt($size) {
+  @include add-space-rule((padding-top), $size);
+}
+
+@mixin pb($size) {
+  @include add-space-rule((padding-bottom), $size);
+}
