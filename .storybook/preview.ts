@@ -1,16 +1,19 @@
-import type { Preview } from "@storybook/react";
-import { withThemeProvider } from "./withThemeProvider";
+import type { Preview } from '@storybook/react';
+
+import '@/app/globals.css';
+
+import { withThemeProvider } from './withThemeProvider';
 
 export const globalTypes = {
   theme: {
-    name: "Theme",
-    description: "Global theme for components",
-    defaultValue: "light",
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'light',
     toolbar: {
-      icon: "circlehollow",
+      icon: 'circlehollow',
       items: [
-        { value: "light", icon: "circlehollow", title: "light-theme" },
-        { value: "dark", icon: "circle", title: "dark-theme" },
+        { value: 'light', icon: 'circlehollow', title: 'light-theme' },
+        { value: 'dark', icon: 'circle', title: 'dark-theme' },
       ],
       showName: true,
       dynamicTitle: true,
@@ -20,7 +23,7 @@ export const globalTypes = {
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
