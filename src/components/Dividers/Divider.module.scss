@@ -1,0 +1,14 @@
+.divider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--on-surface);
+  }
+
+  .label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+}
