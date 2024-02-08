@@ -1,0 +1,25 @@
+.chip-group {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 8px;
+}
+
+.label {
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.leading-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.remove-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  fill: gray;
+  color: gray;
+}
