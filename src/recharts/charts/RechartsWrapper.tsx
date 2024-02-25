@@ -52,8 +52,8 @@ const RechartsWrapper = ({
         polarAxesData: rechartsData.polarAxes,
         polarGrid,
       })}
-      {brush && config.brush && <Brush />}
-      {tooltip && config.tooltip && <Tooltip />}
+      {brush && config.additionalFeatures?.brush && <Brush />}
+      {tooltip && config.additionalFeatures?.tooltip && <Tooltip />}
       {SeriesRenderer({
         seriesConfig: config.series,
         rechartsSeriesData: rechartsData.series,
