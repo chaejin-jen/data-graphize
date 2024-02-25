@@ -4,8 +4,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import randomColor from 'randomcolor';
 import { BarProps, FunnelProps, LegendProps } from 'recharts';
 
-import Chart from '@/app/chart/page';
-
 import RechartsWrapper from '@/recharts/charts/RechartsWrapper';
 import { DEFAULT_CHART_PROPS } from '@/recharts/common/constants';
 import { ChartDataKey, RechartsData } from '@/recharts/common/types';
@@ -18,7 +16,7 @@ const meta: Meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Chart>;
+} satisfies Meta<typeof RechartsWrapper>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
