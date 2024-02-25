@@ -3,6 +3,7 @@ const path = require('path');
 
 const nextConfig = {
   output: 'export',
+  basePath: '/data-graphize',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
