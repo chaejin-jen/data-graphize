@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import Chart from '@/app/chart/page';
-
 import { Tab, TabView } from '@/components/TabViews/Tabview';
 
 import InteractiveChart from '@/recharts/InteractiveChart';
@@ -16,7 +14,7 @@ const meta: Meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Chart>;
+} satisfies Meta<typeof InteractiveChart>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

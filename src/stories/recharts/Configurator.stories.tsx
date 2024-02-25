@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import Chart from '@/app/chart/page';
-
 import { ChartType } from '@/recharts/common/types';
 import ChartConfigurator from '@/recharts/configurators/ChartConfigurator';
 import useRechartsData from '@/recharts/hooks/useRechartsData';
@@ -14,7 +12,7 @@ const meta: Meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Chart>;
+} satisfies Meta<typeof ChartConfigurator>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
