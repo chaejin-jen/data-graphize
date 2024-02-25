@@ -4,6 +4,7 @@ import { Key, Setter, Value, ValueSetter } from '../../../common/types';
 import { ElementControlRenderer, RechartsElementKey } from '../../types';
 import AxisControl from '../Control/AxisControl';
 import ChartControl from '../Control/ChartControl';
+import FunnelControl from '../Control/FunnelControl';
 import LegendControl from '../Control/LegendControl';
 import PolarAxisControl from '../Control/PolarAxisControl';
 import SeriesControl from '../Control/SeriesControl';
@@ -41,8 +42,9 @@ export const getElementControlRenderer = <T>(
     case 'scatters': {
       return SeriesControl<T>;
     }
+    // special series
     case 'funnel': {
-      return SeriesControl<T>;
+      return FunnelControl<T>;
     }
     // axes
     case 'xAxes': {
