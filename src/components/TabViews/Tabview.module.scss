@@ -1,0 +1,39 @@
+.tab-view-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+}
+
+.tab-button {
+  margin-right: 8px;
+  padding: 8px 16px 10px;
+  transition: background-color 0.3s;
+  border: 0 solid var(--surface);
+  border-radius: 4px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  height: calc(100% - 6px);
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+  filter: brightness(60%);
+}
+
+.active {
+  border: 1px solid var(--surface-variant);
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+}
+
+.tab-content {
+  margin-top: -7px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--surface-variant);
+}

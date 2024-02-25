@@ -41,13 +41,11 @@ type ChartType =
 export type { ChartType };
 
 interface ChartConfig {
-  type: ChartType;
   common: Partial<Record<keyof RechartsCommonData, boolean>>;
   series?: Partial<Record<keyof RechartsSeriesData, boolean>>;
   axes?: Partial<Record<keyof RechartsAxesData, boolean>>;
   polarAxes?: Partial<Record<keyof RechartsPolarAxesData, boolean>>;
-  brush?: boolean;
-  tooltip?: boolean;
+  additionalFeatures?: Partial<Record<'brush' | 'tooltip', boolean>>;
 }
 export type { ChartConfig };
 

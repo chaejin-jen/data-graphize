@@ -5,7 +5,6 @@ import { ChartConfig } from './types';
 
 // Chart config
 const areaChartConfig: ChartConfig = {
-  type: 'area',
   common: {
     chart: true,
     legend: true,
@@ -17,12 +16,13 @@ const areaChartConfig: ChartConfig = {
     xAxes: true,
     yAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const barChartConfig: ChartConfig = {
-  type: 'bar',
   common: {
     chart: true,
     legend: true,
@@ -34,12 +34,13 @@ const barChartConfig: ChartConfig = {
     xAxes: true,
     yAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const lineChartConfig: ChartConfig = {
-  type: 'line',
   common: {
     chart: true,
     legend: true,
@@ -51,12 +52,13 @@ const lineChartConfig: ChartConfig = {
     xAxes: true,
     yAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const composedChartConfig: ChartConfig = {
-  type: 'composed',
   common: {
     chart: true,
     legend: true,
@@ -71,12 +73,13 @@ const composedChartConfig: ChartConfig = {
     xAxes: true,
     yAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const scatterChartConfig: ChartConfig = {
-  type: 'scatter',
   common: {
     chart: true,
     legend: true,
@@ -88,12 +91,13 @@ const scatterChartConfig: ChartConfig = {
     xAxes: true,
     yAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const pieChartConfig: ChartConfig = {
-  type: 'pie',
   common: {
     chart: true,
     legend: true,
@@ -104,12 +108,13 @@ const pieChartConfig: ChartConfig = {
   axes: {
     zAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const radarChartConfig: ChartConfig = {
-  type: 'radar',
   common: {
     chart: true,
     legend: true,
@@ -121,12 +126,13 @@ const radarChartConfig: ChartConfig = {
     angleAxes: true,
     radiusAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const radialChartConfig: ChartConfig = {
-  type: 'radial',
   common: {
     chart: true,
     legend: true,
@@ -138,12 +144,13 @@ const radialChartConfig: ChartConfig = {
     angleAxes: true,
     radiusAxes: true,
   },
-  brush: true,
-  tooltip: true,
+  additionalFeatures: {
+    brush: true,
+    tooltip: true,
+  },
 };
 
 const funnelChartConfig: ChartConfig = {
-  type: 'funnel',
   common: {
     chart: true,
     legend: true,
@@ -151,15 +158,17 @@ const funnelChartConfig: ChartConfig = {
   series: {
     funnel: true,
   },
-  tooltip: true,
+  additionalFeatures: {
+    tooltip: true,
+  },
 };
-
 const treemapChartConfig: ChartConfig = {
-  type: 'treemap',
   common: {
     chart: true,
   },
-  tooltip: true,
+  additionalFeatures: {
+    tooltip: true,
+  },
 };
 
 export const CHART_CONFIG = {
