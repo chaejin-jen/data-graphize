@@ -4,18 +4,18 @@ import React from 'react';
 
 import { useTheme } from '@/hooks/useTheme';
 
-import ToggleSwitch from './ToggleSwitch';
+import Switch from './Switch';
 
-const ThemeToggleSwitch: React.FC<{}> = () => {
+const ThemeSwitch: React.FC<{}> = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <ToggleSwitch
+    <Switch
       toggled={theme === 'light'}
-      onClick={toggleTheme}
+      onChange={toggleTheme}
       activeContent={<p>☀️</p>}
       inActiveContent={<p>🌙</p>}
     />
   );
 };
 
-export default ThemeToggleSwitch;
+export default ThemeSwitch;

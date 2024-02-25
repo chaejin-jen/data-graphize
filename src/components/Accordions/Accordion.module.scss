@@ -1,0 +1,29 @@
+.accordion {
+  margin-bottom: 1rem;
+  border: 1px solid var(--outline);
+  border-radius: 4px;
+
+  &-toggle {
+    filter: grayscale(100%) contrast(0);
+    pointer-events: none;
+  }
+
+  &-label {
+    padding: 1rem;
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+    font-weight: bold;
+    cursor: pointer;
+
+    :hover {
+      background-color: var(--surface-variant);
+    }
+  }
+
+  &-content {
+    padding: 1rem;
+    padding-left: 3rem;
+    background-color: var(--tertiary);
+    color: var(--on-tertiary);
+  }
+}

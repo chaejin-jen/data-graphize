@@ -50,11 +50,11 @@ $spacing-scale: (
 }
 
 @mixin m($size) {
-  margin: #{$space}#{$unit} !important;
+  margin: #{get-spacing-value($size)}rem !important;
 }
 
 @mixin p($size) {
-  padding: #{$space}#{$unit} !important;
+  padding: #{get-spacing-value($size)}rem !important;
 }
 
 @mixin mx($size) {

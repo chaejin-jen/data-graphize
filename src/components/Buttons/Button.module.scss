@@ -1,0 +1,64 @@
+@use '@/styles/tokens/_typography.scss' as typography;
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 1rem;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  @include typography.label-styles;
+  @include typography.font-bold(base);
+
+  :hover {
+    opacity: 0.7;
+  }
+
+  > div {
+    position: relative;
+    align-content: center;
+    align-items: center;
+  }
+
+  &-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+
+  &-secondary {
+    background-color: var(--secondary);
+    box-shadow: var(--outline) 0 0 0 1px inset;
+    color: var(--on-secondary);
+  }
+
+  &-disabled {
+    background-color: var(--outline);
+    color: var(--white);
+    cursor: not-allowed;
+
+    :hover {
+      opacity: 1;
+    }
+  }
+
+  &-working {
+    cursor: not-allowed;
+
+    :hover {
+      opacity: 1;
+    }
+  }
+}
+
+.spinner {
+  width: 20;
+  height: 20;
+}

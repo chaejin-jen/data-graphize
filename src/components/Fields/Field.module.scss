@@ -1,0 +1,32 @@
+.field {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  input[type='text'],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    transition: border-color 0.15s ease-in-out;
+    border: 1px solid var(--primary-fixed);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: var(--primary-fixed-dim);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem var(--outline);
+    }
+  }
+
+  .error-message {
+    margin-top: 0.25rem;
+    color: var(--error);
+    font-size: 0.875rem;
+  }
+}

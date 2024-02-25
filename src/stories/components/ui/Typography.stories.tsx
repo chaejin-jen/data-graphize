@@ -26,6 +26,7 @@ export const Variant: Story = {
         flexDirection: 'row',
         gap: '3rem',
         alignContent: 'stretch',
+        color: 'black',
       }}>
       <div style={{ minWidth: '20rem' }}>
         #arg: size

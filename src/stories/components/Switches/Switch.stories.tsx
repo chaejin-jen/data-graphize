@@ -2,16 +2,17 @@ import { useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import ToggleSwitch from '@/components/Switches/ToggleSwitch';
+import Switch from '@/components/Switches/Switch';
+import Typography from '@/components/ui/Typography/Typography';
 
 const meta: Meta = {
-  title: 'Components/Switches/ToggleSwitch',
-  component: ToggleSwitch,
+  title: 'Components/Switches/Switch',
+  component: Switch,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof ToggleSwitch>;
+} satisfies Meta<typeof Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,17 +23,19 @@ const ButtonWithHooks = (args: { [x: string]: any }) => {
   const handleToggle = () => {
     setToggled(!toggled);
   };
-  return <ToggleSwitch {...args} onClick={handleToggle} toggled={toggled} />;
+  return <Switch {...args} onChange={handleToggle} toggled={toggled} />;
 };
 
 export const Default: Story = {
   render: () => (
     <>
-      <ButtonWithHooks size="small" />
+      <ButtonWithHooks size="xs" />
       <br />
-      <ButtonWithHooks size="medium" />
+      <ButtonWithHooks size="sm" />
       <br />
-      <ButtonWithHooks size="large" />
+      <ButtonWithHooks size="md" />
+      <br />
+      <ButtonWithHooks size="lg" />
       <br />
     </>
   ),
@@ -40,7 +43,8 @@ export const Default: Story = {
 
 export const Label: Story = {
   args: {
-    label: 'HOHOH',
+    label: <Typography size="label-prominent-large">Label</Typography>,
+    labelStyle: { color: 'pink' },
   },
   render: (args) => <ButtonWithHooks {...args} toggled={true} />,
 };

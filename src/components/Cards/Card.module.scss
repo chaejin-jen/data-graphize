@@ -1,0 +1,40 @@
+@use '@/styles/tokens/_spacing.scss' as spacing;
+@use '@/styles/tokens/_shadows.scss' as shadows;
+@use '@/styles/tokens/_typography.scss' as typography;
+
+.card {
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  background-color: var(--surface-variant);
+
+  @include spacing.mb(md);
+  @include spacing.p(md);
+
+  .header {
+    @include typography.title-styles;
+    @include typography.font-regular(small);
+    @include spacing.mb(md);
+
+    color: var(--on-surface);
+  }
+
+  .content {
+    @include spacing.mb(md);
+    @include typography.font-regular(lg-md);
+  }
+
+  .footer {
+    color: var(--outline);
+    font-size: 0.9rem;
+    @include spacing.mt(md);
+  }
+}
+
+.shadow {
+  transition: box-shadow 0.3s ease;
+  box-shadow: shadows.$shadow-md;
+
+  &:hover {
+    box-shadow: shadows.$shadow-lg;
+  }
+}

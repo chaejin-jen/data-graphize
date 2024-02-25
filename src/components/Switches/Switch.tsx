@@ -2,14 +2,14 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-import styles from './ToggleSwitch.module.scss';
+import styles from './Switch.module.scss';
 
-export type Size = 'small' | 'medium' | 'large';
+export type Size = 'xs' | 'sm' | 'md' | 'lg';
 
-interface ToggleSwitchProps {
+interface SwitchProps {
   label?: string;
   toggled?: boolean;
-  onClick?: () => void;
+  onChange?: () => void;
   size?: Size;
   style?: React.CSSProperties;
   labelStyle?: React.CSSProperties;
@@ -18,11 +18,11 @@ interface ToggleSwitchProps {
   inActiveContent?: React.ReactNode;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
+const Switch: React.FC<SwitchProps> = ({
   label,
   toggled = false,
-  onClick,
-  size = 'small',
+  onChange,
+  size = 'sm',
   style,
   labelStyle,
   circleStyle,
@@ -39,21 +39,21 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
       toggled && styles[`circle-toggled-${size}`],
     );
   return (
-    <div className={styles.container}>
+    <div className={styles['container']}>
       {label && <span style={labelStyle}>{label}</span>}
       <button
         type="button"
-        onClick={onClick}
+        onClick={onChange}
         className={getButtonClasses()}
         style={style}>
         {activeContent && toggled && activeContent}
-        <div className={getCircleClasses()} style={circleStyle}></div>
+        <span className={getCircleClasses()} style={circleStyle}></span>
         {inActiveContent && !toggled && (
-          <div className={styles.right}>{inActiveContent}</div>
+          <span className={styles['right']}>{inActiveContent}</span>
         )}
       </button>
     </div>
   );
 };
 
-export default ToggleSwitch;
+export default Switch;

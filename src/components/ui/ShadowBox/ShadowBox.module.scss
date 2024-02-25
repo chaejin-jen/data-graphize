@@ -1,0 +1,47 @@
+@use '@/styles/tokens/_shadows.scss' as shds;
+
+.shadow-box {
+  &-embed {
+    @include shds.shadow-embed;
+  }
+
+  &-embed-hover {
+    @include shds.shadow-embed-hover;
+  }
+
+  &-dropdown {
+    @include shds.shadow-dropdown;
+  }
+
+  &-modal {
+    @include shds.shadow-modal;
+  }
+
+  &-contrast {
+    @include shds.shadow-contrast;
+  }
+
+  &-xxs {
+    box-shadow: shds.$shadow-xxs;
+  }
+
+  &-xs {
+    box-shadow: shds.$shadow-xs;
+  }
+
+  &-sm {
+    box-shadow: shds.$shadow-sm;
+  }
+
+  &-md {
+    box-shadow: shds.$shadow-md;
+  }
+
+  &-lg {
+    box-shadow: shds.$shadow-lg;
+  }
+
+  &-xl {
+    box-shadow: shds.$shadow-xl;
+  }
+}
