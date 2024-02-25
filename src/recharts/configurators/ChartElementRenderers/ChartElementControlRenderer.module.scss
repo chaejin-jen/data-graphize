@@ -1,0 +1,23 @@
+.element {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  padding: 0.4rem;
+  background-color: var(--surface-container);
+  color: var(--on-surface-container);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+
+  > {
+    display: flex;
+    flex-direction: row;
+  }
+
+  * {
+    gap: 0.5rem;
+  }
+}

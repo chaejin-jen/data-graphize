@@ -1,0 +1,11 @@
+@mixin hover-scroll {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &:hover {
+    transition: scrollbar-color 0.3s ease-out;
+    scrollbar-color: var(--surface-container-low) transparent;
+    -ms-overflow-style: none;
+  }
+}

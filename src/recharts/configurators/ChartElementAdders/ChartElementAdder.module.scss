@@ -1,0 +1,15 @@
+.adder {
+  &-control {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+    gap: 0.5rem;
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 0.4rem;
+  }
+}
