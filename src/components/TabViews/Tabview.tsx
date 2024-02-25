@@ -7,20 +7,29 @@ import styles from './Tabview.module.scss';
 interface TabProps {
   title: string;
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-export const Tab: React.FC<TabProps> = ({ children }) => {
-  return <div className={styles['tab-content']}>{children}</div>;
+export const Tab: React.FC<TabProps> = ({ children, style }) => {
+  return (
+    <div className={clsx(styles['tab-content'])} style={style}>
+      {children}
+    </div>
+  );
 };
 
 interface TabViewProps {
   initialTabIndex?: number;
   children: React.ReactNode;
+  style?: React.CSSProperties;
+  hide?: boolean;
 }
 
 export const TabView: React.FC<TabViewProps> = ({
   initialTabIndex = 0,
   children,
+  style,
+  hide,
 }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
 
@@ -29,7 +38,7 @@ export const TabView: React.FC<TabViewProps> = ({
   };
 
   return (
-    <div className={styles['tab-view-container']}>
+    <div className={styles['tab-view-container']} style={style}>
       <div className={styles['tab-buttons']}>
         {React.Children.map(children, (child, index) => {
           if (React.isValidElement(child)) {
@@ -38,7 +47,6 @@ export const TabView: React.FC<TabViewProps> = ({
                 className={clsx(
                   styles['tab-button'],
                   index === activeTabIndex && styles['active'],
-                  // : styles['inactive'],
                 )}
                 key={index}
                 onClick={() => handleTabClick(index)}>
@@ -52,9 +60,13 @@ export const TabView: React.FC<TabViewProps> = ({
       <div>
         {React.Children.map(children, (child, index) => {
           if (index === activeTabIndex) {
-            return child;
+            return <div key={index}>{child}</div>;
           }
-          return null;
+          return hide ? (
+            <div className={clsx(styles['tab-hide'])} key={index}>
+              {child}
+            </div>
+          ) : null;
         })}
       </div>
     </div>
