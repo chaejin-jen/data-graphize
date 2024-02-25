@@ -86,22 +86,23 @@ jobs:
   # Build job for Storybook
   build_storybook:
     runs-on: ubuntu-latest
+    # Job steps
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      # Manual Checkout
+      - uses: actions/checkout@v3
+
+      # Set up Node
+      - uses: actions/setup-node@v3
         with:
-          node-version: '20'
-      - name: Install dependencies
-        run: npm install
-      - name: Build Storybook
-        run: npm run build-storybook
-      - name: Upload Storybook artifact
-        uses: actions/upload-artifact@v2
+          node-version: '16.x'
+
+      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
         with:
-          name: storybook
-          path: ./storybook-static
+          install_command: npm ci
+          build_command: npm run build-storybook
+          path: storybook-static # default: dist/storybook
+          checkout: false # default: true
 
   # Deployment job
   deploy:
