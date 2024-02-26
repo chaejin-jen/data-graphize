@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   # Build job
-  build_nextjs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -78,30 +78,15 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js # Next 14 - Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      # Build Storybook and place it in the next build directory
+      - name: Build Storybook
+        run: |
+          npm run build-storybook
+          mv ./storybook-static ./out/storybook
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-
-  # Build job for Storybook
-  build_storybook:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install dependencies
-        run: npm install
-      - name: Build Storybook
-        run: npm run build-storybook
-      - name: Upload Storybook artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: storybook
-          path: ./storybook-static
 
   # Deployment job
   deploy:
@@ -109,14 +94,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [build_nextjs, build_storybook]
+    needs: [build]
     if: github.event_name == 'push'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # Set up configuration for deploying Next.js app
           artifact-directory: out
-          # Set up configuration for deploying Storybook
-          storybook-directory: storybook-static
